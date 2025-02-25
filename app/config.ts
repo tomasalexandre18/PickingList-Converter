@@ -14,7 +14,7 @@ export function importConfig() {
         if (files && files.length > 0) {
             const file = files[0];
             const data = await file.text();
-            let config: any;
+            let config: unknown;
             try {
                 config = JSON.parse(data);
             } catch (e) {

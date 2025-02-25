@@ -45,7 +45,10 @@ export default function Option({missingCategories, setMissingCategories, finish}
             setConfig([...config, {name: catName, subCategory: []}]);
             setShowModal(false);
         }}/> : null);
-    }, [showModal]);
+
+        // if we add modal in the dependency array, it will create an infinite loop
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [showModal, config, setConfig]);
 
 
     return (<ConfigContext.Provider value={{config, setConfig, missingCategories, setMissingCategories}}>
