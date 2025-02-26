@@ -79,7 +79,7 @@ export function Menu({onFileSelected, onConfigEdit}: MenuProps) {
         <>
             <div className={"flex flex-col items-center justify-center h-screen bg-[#F4F3F2] gap-5 w-screen"}>
                 <div className={"flex gap-3 flex-col items-center justify-center bg-[#FFFEFD] p-5 rounded-[25px] shadow-xl"}>
-                    <h1 className={"text-4xl font-bold"}>Poisson Livreur - Picking List</h1>
+                    <h1 className={"text-4xl font-bold"}>Frais livré - Picking List</h1>
                     <input type="file" accept=".csv" className={"hidden"} id={"file"} onChange={async (event) => {await handleFileChange(event); event.target.value = "";}}/>
                     <label htmlFor="file"
                            className={"w-full bg-[#007BFF] text-white rounded-lg cursor-pointer hover:bg-[#0056B3] transition duration-300 shadow border-dashed border-[5px] border-[#89ADFF] h-[150px]"}>
