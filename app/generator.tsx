@@ -27,15 +27,15 @@ export default function Generator({pickingList, finish = undefined}: GeneratorPr
         };
     }, [finish]);
 
-    // useEffect(() => {
-    //     // print the page when the component is rendered
-    //     const id = setTimeout(() => { // skip double print with react StrictMode
-    //         window.print();
-    //     }, 10);
-    //     return () => {
-    //         clearTimeout(id);
-    //     }
-    // }, []);
+    useEffect(() => {
+        // print the page when the component is rendered
+        const id = setTimeout(() => { // skip double print with react StrictMode
+            window.print();
+        }, 10);
+        return () => {
+            clearTimeout(id);
+        }
+    }, []);
 
     const [nbCommandes, users, nbCommandesForUser] = useMemo(() => {
         const orders = new Set<string>();
